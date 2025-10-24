@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="todo.css">
+  <title>Todo App</title>
+  
+</head> 
+<body>
+  <main class="app" id="app">
+    <header>
+      <h1>Todo App</h1>
+    </header>
+
+    <form id="addForm" aria-label="Add todo">
+      <input type="text" id="newTodo" placeholder="Add a new task (press Enter or Add)" autocomplete="off" required />
+      <button class="addbut" type="submit">Add</button>
+    </form>
+
+    <div class="controls">
+      <select id="filter" class="filter" aria-label="Filter todos">
+        <option value="all">All</option>
+        <option value="active">Active</option>
+        <option value="completed">Completed</option>
+      </select>
+      <div class="small">Tip: This shows your TODO's</div>
+    </div>
+
+    <ul class="todo-list" id="todoList" aria-live="polite"></ul>
+
+    <footer>
+      <div class="pill" id="count">0 items</div>
+      <div style="display:flex;gap:8px">
+        <button id="clearCompleted" class="icon-btn">Clear completed</button>
+        <button id="syncNow" class="icon-btn">Sync</button>
+      </div>
+    </footer>
+
+    </details>
+  </main>
+
+  <script src="todo.js"></script>
+</body>
+</html>
